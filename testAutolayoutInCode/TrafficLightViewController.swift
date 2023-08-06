@@ -8,13 +8,10 @@
 import UIKit
 
 enum TrafficLightColor {
-    case red
-    case yellow
-    case green
-    case lightOff
+    case red, yellow, green, lightOff
 }
 
-class ViewController: UIViewController {
+class TrafficLightViewController: UIViewController {
     private let circleRed = UIView()
     private let circleYellow = UIView()
     private let circleGreen = UIView()
@@ -65,31 +62,31 @@ class ViewController: UIViewController {
     }
 
     @objc private func switchCircle() {
-        let switchedOn: Float = 1.0
-        let switchedOff: Float = 0.3
+        let lightIsOn: Float = 1
+        let lightIsOff: Float = 0.3
 
         switch currentColor {
         case .lightOff:
-            circleRed.layer.opacity = switchedOn
+            circleRed.layer.opacity = lightIsOn
             currentColor = .red
         case .red:
-            circleRed.layer.opacity = switchedOff
-            circleYellow.layer.opacity = switchedOn
+            circleRed.layer.opacity = lightIsOff
+            circleYellow.layer.opacity = lightIsOn
             currentColor = .yellow
         case .yellow:
-            circleYellow.layer.opacity = switchedOff
-            circleGreen.layer.opacity =   switchedOn
+            circleYellow.layer.opacity = lightIsOff
+            circleGreen.layer.opacity =   lightIsOn
             currentColor = .green
         case .green:
-            circleGreen.layer.opacity = switchedOff
-            circleRed.layer.opacity = switchedOn
+            circleGreen.layer.opacity = lightIsOff
+            circleRed.layer.opacity = lightIsOn
             currentColor = .red
         }
     }
 }
 
 // MARK: layout
-private extension ViewController {
+private extension TrafficLightViewController {
     func setConstraintsForCircle() {
         circleRed.translatesAutoresizingMaskIntoConstraints = false
         circleRed.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: circleSize).isActive = true
