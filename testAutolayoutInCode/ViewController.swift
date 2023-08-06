@@ -7,17 +7,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+enum TrafficLightColor {
+    case red
+    case yellow
+    case green
+    case lightOff
+}
 
+class ViewController: UIViewController {
     private let circleRed = UIView()
     private let circleYellow = UIView()
     private let circleGreen = UIView()
     private let circleSize = 0.35
-    private let isActive = false
+    private var isActive = false
+    private var currentColor = TrafficLightColor.lightOff
 
     private lazy var button: UIButton = {
         let button = UIButton()
-        button.setTitle(isActive ? "NEXT" : "START", for: .normal)
+        button.setTitle("START", for: .normal)
         button.backgroundColor = .blue
         button.layer.cornerRadius = 20
         return button
@@ -29,8 +36,10 @@ class ViewController: UIViewController {
         setupCircle()
         view.addSubview(button)
         setConstraintsForButton()
+        buttonAction()
     }
 
+    // MARK: settings for circle
     func setupCircle() {
         view.addSubview(circleRed)
         view.addSubview(circleYellow)
@@ -47,6 +56,35 @@ class ViewController: UIViewController {
         circle.layer.borderWidth = 3
         circle.layer.borderColor = UIColor.white.cgColor
         circle.layer.opacity = 0.3
+    }
+
+    // MARK: settings for button
+    private func buttonAction() {
+        button.addTarget(self, action: #selector(switchCircle), for: .touchUpInside)
+        button.setTitle("NEXT", for: .normal)
+    }
+
+    @objc private func switchCircle() {
+        let switchedOn: Float = 1.0
+        let switchedOff: Float = 0.3
+
+        switch currentColor {
+        case .lightOff:
+            circleRed.layer.opacity = switchedOn
+            currentColor = .red
+        case .red:
+            circleRed.layer.opacity = switchedOff
+            circleYellow.layer.opacity = switchedOn
+            currentColor = .yellow
+        case .yellow:
+            circleYellow.layer.opacity = switchedOff
+            circleGreen.layer.opacity =   switchedOn
+            currentColor = .green
+        case .green:
+            circleGreen.layer.opacity = switchedOff
+            circleRed.layer.opacity = switchedOn
+            currentColor = .red
+        }
     }
 }
 
