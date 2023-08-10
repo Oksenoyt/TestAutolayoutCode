@@ -11,7 +11,7 @@ enum TrafficLightColor {
     case red, yellow, green, lightOff
 }
 
-class TrafficLightViewController: UIViewController {
+final class TrafficLightViewController: UIViewController {
     private let circleRed = UIView()
     private let circleYellow = UIView()
     private let circleGreen = UIView()
