@@ -13,8 +13,9 @@
 		42295C9F2A7DB10200D82925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42295C9E2A7DB10200D82925 /* Assets.xcassets */; };
 		42295CA22A7DB10200D82925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42295CA02A7DB10200D82925 /* LaunchScreen.storyboard */; };
 		42295CAC2A852DBE00D82925 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42295CAB2A852DBE00D82925 /* SecondViewController.swift */; };
-		42295CAE2A852E0800D82925 /* ThitdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42295CAD2A852E0800D82925 /* ThitdViewController.swift */; };
+		42295CAE2A852E0800D82925 /* MatrixViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42295CAD2A852E0800D82925 /* MatrixViewController.swift */; };
 		42295CB32A85365900D82925 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42295CB22A85365900D82925 /* TabBarController.swift */; };
+		42DBD99C2A8597AB00BC0192 /* PillSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DBD99B2A8597AB00BC0192 /* PillSelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +27,9 @@
 		42295CA12A7DB10200D82925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42295CA32A7DB10200D82925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42295CAB2A852DBE00D82925 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		42295CAD2A852E0800D82925 /* ThitdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThitdViewController.swift; sourceTree = "<group>"; };
+		42295CAD2A852E0800D82925 /* MatrixViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixViewController.swift; sourceTree = "<group>"; };
 		42295CB22A85365900D82925 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		42DBD99B2A8597AB00BC0192 /* PillSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillSelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 			children = (
 				42295C992A7DB10000D82925 /* TrafficLightViewController.swift */,
 				42295CAB2A852DBE00D82925 /* SecondViewController.swift */,
-				42295CAD2A852E0800D82925 /* ThitdViewController.swift */,
+				42295CAD2A852E0800D82925 /* MatrixViewController.swift */,
 				42295CB22A85365900D82925 /* TabBarController.swift */,
+				42DBD99B2A8597AB00BC0192 /* PillSelectionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -171,7 +174,8 @@
 				42295CB32A85365900D82925 /* TabBarController.swift in Sources */,
 				42295C9A2A7DB10000D82925 /* TrafficLightViewController.swift in Sources */,
 				42295C962A7DB10000D82925 /* AppDelegate.swift in Sources */,
-				42295CAE2A852E0800D82925 /* ThitdViewController.swift in Sources */,
+				42DBD99C2A8597AB00BC0192 /* PillSelectionViewController.swift in Sources */,
+				42295CAE2A852E0800D82925 /* MatrixViewController.swift in Sources */,
 				42295C982A7DB10000D82925 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

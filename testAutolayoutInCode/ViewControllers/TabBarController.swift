@@ -36,7 +36,7 @@ final class TabBArController: UITabBarController {
 
         let trafficLightController = TrafficLightViewController()
         let secondController = SecondViewController()
-        let thirdController = ThirdViewController()
+        let thirdController = MatrixViewController()
 
         let secondNavigation = UINavigationController(rootViewController: secondController)
 
